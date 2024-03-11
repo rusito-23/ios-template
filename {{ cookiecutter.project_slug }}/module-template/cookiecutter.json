@@ -1,0 +1,5 @@
+{
+  "module_name": null,
+  "module_slug": "{{ cookiecutter.module_name.replace(' ', '') }}",
+  "ios_deployment_target": null
+}

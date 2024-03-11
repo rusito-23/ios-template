@@ -5,5 +5,6 @@
   "bundle_prefix": "com.{{ cookiecutter.author.lower().replace(' ', '') }}",
   "ios_deployment_target": null,
   "xcode_version": null,
-  "codesign_style": "AUTOMATIC"
+  "codesign_style": "AUTOMATIC",
+  "_copy_without_render": ["module-template"]
 }

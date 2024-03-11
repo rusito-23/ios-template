@@ -10,6 +10,7 @@ GEN = mint run xcodegen
 RM = rm
 LINT = mint run swiftlint
 LINT_OPTS = --strict --quiet
+COOKIECUTTER = cookiecutter
 
 # Pre-Commit
 PRE_COMMIT_DST = .git/hooks/pre-commit
@@ -54,6 +55,11 @@ regen: clean gen
 .PHONY: open
 open: regen
 	@$(XED) .
+
+# Create a new module.
+.PHONY: module
+module: regen
+	@$(COOKIECUTTER) module-template
 
 # === Checkers ====
 
