@@ -42,13 +42,7 @@ cookiecutter /full/path/to/ios-template
 
 ## Module Template
 
-The project comes with a _nested_ template for modules, which can be triggered using:
-
-```shell
-make module
-```
-
-This will create a new Swift Package module with the given name, but it won't be added to the workspace
+The [module-template](./module-template) will create a new Swift Package module with the given name, but it won't be added to the workspace
 or as dependency to any target. This needs to be done manually after creation.
 
 ## Tools

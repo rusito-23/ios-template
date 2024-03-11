@@ -10,7 +10,6 @@ GEN = mint run xcodegen
 RM = rm
 LINT = mint run swiftlint
 LINT_OPTS = --strict --quiet
-COOKIECUTTER = cookiecutter
 
 # Pre-Commit
 PRE_COMMIT_DST = .git/hooks/pre-commit
@@ -56,11 +55,6 @@ regen: clean gen
 open: regen
 	@$(XED) .
 
-# Create a new module.
-.PHONY: module
-module: regen
-	@$(COOKIECUTTER) module-template
-
 # === Checkers ====
 
 # Lint all Swift files.
@@ -81,11 +75,10 @@ spellcheck:
 # === Pre-Commit ====
 
 # Install pre-commit script.
-# TODO: Check if it's already installed.
 .PHONY: install-pre-commit
 install-pre-commit:
 	@echo "\n# $(PRE_COMMIT_MSG)\n$(MAKE) pre-commit" \
-		>> $(PRE_COMMIT_DST)
+		> $(PRE_COMMIT_DST)
 
 # Run pre-commit checks.
 .PHONY: pre-commit
