@@ -8,6 +8,7 @@ options:
 
 settings:
   base:
+    PRODUCT_DISPLAY_NAME: {{ cookiecutter.project_name }}
     MARKETING_VERSION: 0.0.1
     CURRENT_PROJECT_VERSION: 1
     CODE_SIGN_STYLE: Automatic
@@ -18,15 +19,15 @@ targets:
     platform: iOS
 
     sources:
-      - Sources
+      - Shell/Sources
 
     settings:
       base:
         ENABLE_PREVIEWS: YES
-        DEVELOPMENT_ASSET_PATHS: "Resources"
+        DEVELOPMENT_ASSET_PATHS: "Shell/Resources"
 
     info:
-      path: Resources/Info.plist
+      path: Shell/Resources/Info.plist
       properties:
         properties:
         CFBundleVersion: $(CURRENT_PROJECT_VERSION)

@@ -18,7 +18,7 @@ PRE_COMMIT_MSG = Run {{ cookiecutter.project_slug }} Pre-Commit
 # Project
 PRO_SRC = project.yml
 PRO_OUT = Shell.xcodeproj
-SRC = $(shell find ./Sources/ -type f -regex ".*\.swift")
+SRC = $(shell find ./Shell/Sources/ -type f -regex ".*\.swift")
 
 # === All ====
 .PHONY: all

@@ -2,7 +2,7 @@
 
 A [cookiecutter template](https://cookiecutter.readthedocs.io) to create iOS projects.
 
-## Usage
+## Get Started
 
 1. Install CookieCutter
 
@@ -27,15 +27,15 @@ cookiecutter /full/path/to/ios-template
 ```
 {{ project_slug }}/
 ├── .gitignore
+├── Makefile
 ├── Mintfile
 ├── README.md
 ├── Shell
-│   ├── Makefile
 │   ├── Resources
-│   │   └── .keep
-│   ├── Sources
-│   │   └── .keep
-│   └── project.yml
+│   │   └── ...
+│   └── Sources
+│       └── ...
+├── project.yml
 └── {{ project_slug }}.xcworkspace
     └── contents.xcworkspacedata
 ```
