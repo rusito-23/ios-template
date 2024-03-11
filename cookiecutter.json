@@ -1,0 +1,9 @@
+{
+  "project_name": null,
+  "project_slug": "{{ cookiecutter.project_name.replace(' ', '') }}",
+  "author": "Anonymous",
+  "bundle_prefix": "com.{{ cookiecutter.author.lower().replace(' ', '') }}",
+  "ios_deployment_target": null,
+  "xcode_version": null,
+  "codesign_style": "AUTOMATIC"
+}

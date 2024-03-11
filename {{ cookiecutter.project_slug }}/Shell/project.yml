@@ -1,0 +1,47 @@
+name: Shell
+
+options:
+  bundleIdPrefix: {{ cookiecutter.bundle_prefix }}
+  deploymentTarget:
+    iOS: {{ cookiecutter.ios_deployment_target }}
+  xcodeVersion: {{ cookiecutter.xcode_version }}
+
+settings:
+  base:
+    MARKETING_VERSION: 0.0.1
+    CURRENT_PROJECT_VERSION: 1
+    CODE_SIGN_STYLE: Automatic
+
+targets:
+  {{ cookiecutter.project_slug }}:
+    type: application
+    platform: iOS
+
+    sources:
+      - Sources
+
+    settings:
+      base:
+        ENABLE_PREVIEWS: YES
+        DEVELOPMENT_ASSET_PATHS: "Resources"
+
+    info:
+      path: Resources/Info.plist
+      properties:
+        properties:
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        LSRequiresIPhoneOS: YES
+        UILaunchScreen: ""
+        UIApplicationSupportsIndirectInputEvents: YES
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: YES
+        UISupportedInterfaceOrientations~iphone:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
