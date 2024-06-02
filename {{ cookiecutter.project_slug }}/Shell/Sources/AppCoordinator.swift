@@ -9,4 +9,3 @@ struct AppCoordinator: View {
         Text("{{ cookiecutter.project_name }}")
     }
 }
-

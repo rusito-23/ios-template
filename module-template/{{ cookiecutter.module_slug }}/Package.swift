@@ -10,7 +10,7 @@ let package = Package(
         .library(
             name: "{{ cookiecutter.module_slug }}",
             targets: ["{{ cookiecutter.module_slug }}"]
-        ),
+        )
     ],
     dependencies: [
     ],
@@ -28,6 +28,6 @@ let package = Package(
             ],
             path: "Tests",
             resources: [.process("Resources")]
-        ),
+        )
     ]
 )

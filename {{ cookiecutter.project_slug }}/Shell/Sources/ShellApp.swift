@@ -8,4 +8,3 @@ struct {{ cookiecutter.project_slug }}App: App {
         }
     }
 }
-
